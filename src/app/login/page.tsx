@@ -59,17 +59,6 @@ const IconRight = styled.img`
   height: 450px;
 `;
 
-const Input = styled.input`
-  float: left;
-  width: 440px;
-  height: 60px;
-  border: none;
-  outline: none;
-  padding-left: 15px;
-  font: ${({ theme }) => theme.fonts.Regular16};
-  border-bottom: 3px solid ${({ theme }) => theme.colors.LoginInput};
-`;
-
 const LoginBtn = styled.button`
   width: 180px;
   height: 56px;
