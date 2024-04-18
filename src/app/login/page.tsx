@@ -20,8 +20,10 @@ export default function Home() {
       <IconRight src="/LoginRight.svg" />
       <Logo src="/PlanitLogo.svg" />
       <form>
-        <AuthInput label="아이디" value={id} onChange={onChange} name="id" />
-        <AuthInput label="비밀번호" value={password} onChange={onChange} name="password" type="password" />
+        <InputWrapper>
+          <AuthInput label="아이디" value={id} onChange={onChange} name="id" />
+          <AuthInput label="비밀번호" value={password} onChange={onChange} name="password" type="password" />
+        </InputWrapper>
         <LoginBtn disabled={!id || !password}>로그인</LoginBtn>
       </form>
     </LoginArea>
@@ -44,7 +46,6 @@ const Logo = styled.img`
 `;
 
 const IconLeft = styled.img`
-  float: left;
   position: absolute;
   left: 0;
   height: 450px;
@@ -52,26 +53,32 @@ const IconLeft = styled.img`
 `;
 
 const IconRight = styled.img`
-  float: right;
   position: absolute;
   right: 0;
   margin-bottom: 20vh;
   height: 450px;
 `;
 
-const LoginBtn = styled.button`
-  width: 180px;
-  height: 56px;
-  background-color: ${({ theme }) => theme.colors.Main};
-  font: ${({ theme }) => theme.fonts.Regular20};
-  color: ${({ theme }) => theme.colors.White};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
+const InputWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+`
 
+const LoginBtn = styled.button`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 360px;
+    height: 52px;
+    margin-top: 60px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.White};
+    background-color: ${({ theme }) => theme.colors.Main};
+    border: none
   &:disabled {
     background-color: #dfdfde;
     cursor: default;
