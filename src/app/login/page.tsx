@@ -38,6 +38,7 @@ const LoginArea = styled.div`
   justify-content: center;
   align-items: center;
   gap: 60px;
+  min-width: 500px;
 `;
 
 const Logo = styled.img`
@@ -78,8 +79,9 @@ const LoginBtn = styled.button`
     cursor: pointer;
     color: ${({ theme }) => theme.colors.White};
     background-color: ${({ theme }) => theme.colors.Main};
-    border: none
-  &:disabled {
+    font: ${({ theme }) => theme.fonts.Regular20};
+    border: none;
+    &:disabled {
     background-color: #dfdfde;
     cursor: default;
   }
