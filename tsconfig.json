@@ -18,7 +18,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@image/*": ["./public/*"]
     },
     "forceConsistentCasingInFileNames": true
   },
