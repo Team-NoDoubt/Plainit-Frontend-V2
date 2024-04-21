@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Alert, PlanitLogo, Profile } from '@/assets';
+import { PlanitLogo, Profile } from '@/assets';
 
 export default function Header() {
   return (
@@ -9,10 +9,6 @@ export default function Header() {
       <Image src={PlanitLogo} alt='PlanitLogo' />
       <NavItemWrapper>
         <NavItem>시간표 관리</NavItem>
-        <NavItem>수행평가 관리</NavItem>
-        <NavItem>
-          <Image src={Alert} alt='alertIcon' />
-        </NavItem>
         <UserProfile>
           <Image src={Profile} alt='profileIcon' />
           동욱T
@@ -40,7 +36,7 @@ const Container = styled.div`
 const NavItemWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 100px;
 `;
 
 const NavItem = styled.div`
