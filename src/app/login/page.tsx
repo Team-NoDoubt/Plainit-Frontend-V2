@@ -49,6 +49,7 @@ const LoginArea = styled.div`
   align-items: center;
   gap: 60px;
   min-width: 500px;
+  background-color: ${({theme}) => theme.colors.Background}
 `;
 
 const Logo = styled(Image)`
