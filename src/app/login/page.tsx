@@ -20,7 +20,6 @@ export default function Home() {
   const { id, password } = form;
   return (
     <LoginArea>
-      <Header />
       <IconLeft src={LoginLeft} alt='LoginLeft' />
       <IconRight src={LoginRight} alt='LoginRight' />
       <Logo src={PlanitLogo} alt='PlanitLogo' />
