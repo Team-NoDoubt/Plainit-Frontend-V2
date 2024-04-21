@@ -13,7 +13,7 @@ const colors = {
   ListCheck: '#EFF5FB',
   ListDetailBackground: '#F7F7F7',
   ListContent: '#4D4D4D',
-};
+} as const;
 
 const fonts = {
   Bold32: `900 2rem 'Pretendard'`,
@@ -47,7 +47,7 @@ const fonts = {
   Light20: `300 1.3rem 'Pretendard'`,
   Light16: `300 1rem 'Pretendard'`,
   Light12: `300 0.75rem 'Pretendard'`,
-};
+} as const;
 
 export type ColorsTypes = typeof colors;
 export type FontTypes = typeof fonts;
