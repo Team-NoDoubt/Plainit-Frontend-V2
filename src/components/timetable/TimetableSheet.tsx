@@ -12,12 +12,12 @@ export default function TimetableSheet() {
       </DateWrapper>
       <ContentsWrapper>
         <ClassWrapper width='calc(100% / 11)'>
-          {[1, 2, 3, 4, 5, 6, 7].map((item) => (
+          {Array.from({ length: 7 }, (_, i) => i + 1).map((item) => (
             <ItemBox key={item}>{item}</ItemBox>
           ))}
         </ClassWrapper>
-        {classList.map((classes) => (
-          <ClassWrapper key={classes} width='20%'>
+        {classList.map((classes, i) => (
+          <ClassWrapper key={classes[0] + i} width='20%'>
             {classes.map((classItem, index) => (
               <ItemBox key={classItem + index}>{classItem}</ItemBox>
             ))}
@@ -71,11 +71,11 @@ const ClassWrapper = styled.div<{ width: string }>`
   border-right: 1px solid #ebebeb;
 `;
 
-const ItemBox = styled.div<{ fontSize: number }>`
+const ItemBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: calc(100% / 7);
-  font: ${({ theme, fontSize }) => theme.fonts.Regular32};
+  font: ${({ theme }) => theme.fonts.Regular32};
 `;
